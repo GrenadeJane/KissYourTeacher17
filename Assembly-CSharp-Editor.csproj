@@ -395,6 +395,7 @@
      <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Wires\WireBezierReference.cs" />
      <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Wires\WirePort.cs" />
      <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Wires\WireReference.cs" />
+     <Compile Include="Assets\Scripts\Editor\UITweenPositionEditor.cs" />
      <Compile Include="Assets\Vuforia\Editor\Scripts\ComponentFactoryStarter\ComponentFactoryStarter.cs" />
      <Compile Include="Assets\Vuforia\Editor\Scripts\ExtensionImport.cs" />
      <Compile Include="Assets\Vuforia\Editor\Scripts\PostProcessBuildPlayer.cs" />
@@ -434,6 +435,7 @@
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TangentVertexDataNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PiNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FloorOpNode.shader" />
+     <None Include="Assets\StreamingAssets\Vuforia\KYT_17.xml" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjSpaceLightDirHlpNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ASinOpNode.shader" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
@@ -531,6 +533,7 @@
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SwitchNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BlendNormalsNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FWidthOpNode.shader" />
+     <None Include="Assets\Shader\MedusaRock.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimplifiedFModOpNode.shader" />
      <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DdyOpNode.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
