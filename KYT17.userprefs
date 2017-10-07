@@ -1,19 +1,28 @@
 ﻿<Properties StartupConfiguration="{17A845F2-F7C2-0FB1-1B97-204C20977E0A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Utility/CustomTrackableEventHandler.cs">
     <Files>
       <File FileName="Assets/Scripts/AR/ARImage.cs" Line="8" Column="39" />
       <File FileName="Assets/Scripts/CloudReco/CloudRecoEventHandler.cs" Line="107" Column="1" />
-      <File FileName="Assets/Scripts/ImageTarget/Scripts/CustomTrackableEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ImageTarget/Scripts/CustomTrackableEventListener.cs" Line="1" Column="1" />
       <File FileName="../../Downloads/module-360-PontALesse/Assets/ImageTarget/Scripts/CustomTrackableEventHandler.cs" Line="76" Column="71" />
-      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="71" Column="1" />
+      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="71" Column="13" />
+      <File FileName="Assets/Scripts/Interactions/DialogueManager.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/Interactions/Character.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/Interactions/MiniGame.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/Interactions/BaseInteraction.cs" Line="76" Column="1" />
+      <File FileName="Assets/Scripts/Utility/CustomTrackableEventHandler.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="98" column="1" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="117" column="1" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="118" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets/Scripts/Interactions/BaseInteraction.cs" line="55" offsetX="728" offsetY="756" expression="m_CharactersDictionary." liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.KYT17 PreferredExecutionTarget="Unity.Editor" />
   <MultiItemStartupConfigurations />
 </Properties>
