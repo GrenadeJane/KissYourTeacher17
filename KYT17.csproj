@@ -118,10 +118,12 @@
     <Compile Include="Assets\Scripts\CloudReco\CloudRecoTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\CloudReco\ContentManager.cs" />
     <Compile Include="Assets\Scripts\CloudReco\ScanLine.cs" />
+    <Compile Include="Assets\Scripts\Constellation.cs" />
     <Compile Include="Assets\Scripts\Interactions\BaseInteraction.cs" />
     <Compile Include="Assets\Scripts\Interactions\Character.cs" />
     <Compile Include="Assets\Scripts\Interactions\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Interactions\MiniGame.cs" />
+    <Compile Include="Assets\Scripts\Interactions\Star.cs" />
     <Compile Include="Assets\Scripts\PlayerInventary.cs" />
     <Compile Include="Assets\Scripts\Utility\CustomTrackableEventHandler.cs" />
     <Compile Include="Assets\Scripts\Utility\PUBLIC.cs" />
