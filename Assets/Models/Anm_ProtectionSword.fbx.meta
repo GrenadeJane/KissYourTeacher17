@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 1b5614cdd0e775b46a1ccac33be062c2
+timeCreated: 1507413252
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Center
+    100004: CenterPivot
+    100006: Left_Hands
+    100008: Left_Index1
+    100010: Left_Index2
+    100012: Left_Index3
+    100014: Left_Index_end
+    100016: Left_Middle1
+    100018: Left_Middle2
+    100020: Left_Middle3
+    100022: Left_Middle_end
+    100024: Left_MiddleArms
+    100026: Left_Pinky1
+    100028: Left_Pinky2
+    100030: Left_Pinky3
+    100032: Left_Pinky_end
+    100034: Left_Ring1
+    100036: Left_Ring2
+    100038: Left_Ring3
+    100040: Left_Ring_end
+    100042: Left_Thumb1
+    100044: Left_Thumb2
+    100046: Left_Thumb3
+    100048: Left_Thumb_end
+    100050: Left_UpperArms
+    100052: LeftArms
+    100054: LeftFingers
+    100056: null1
+    100058: null3
+    100060: null3 1
+    100062: null4
+    100064: null4 1
+    100066: null5
+    100068: null5 1
+    100070: null6
+    100072: nurbsCircle1
+    100074: nurbsCircle1 1
+    100076: nurbsCircle3
+    100078: nurbsCircle3 1
+    100080: nurbsCircle4
+    100082: nurbsCircle4 1
+    100084: polySurface1
+    100086: Right_Hands
+    100088: Right_Index1
+    100090: Right_Index2
+    100092: Right_Index3
+    100094: Right_Index_end
+    100096: Right_Middle1
+    100098: Right_Middle2
+    100100: Right_Middle3
+    100102: Right_Middle_end
+    100104: Right_MiddleArms
+    100106: Right_Pinky1
+    100108: Right_Pinky2
+    100110: Right_Pinky3
+    100112: Right_Pinky_end
+    100114: Right_Ring1
+    100116: Right_Ring2
+    100118: Right_Ring3
+    100120: Right_Ring_end
+    100122: Right_Thumb1
+    100124: Right_Thumb2
+    100126: Right_Thumb3
+    100128: Right_Thumb_end
+    100130: Right_UpperArms
+    100132: RightArms
+    100134: RightFingers
+    100136: Serpe
+    400000: //RootNode
+    400002: Center
+    400004: CenterPivot
+    400006: Left_Hands
+    400008: Left_Index1
+    400010: Left_Index2
+    400012: Left_Index3
+    400014: Left_Index_end
+    400016: Left_Middle1
+    400018: Left_Middle2
+    400020: Left_Middle3
+    400022: Left_Middle_end
+    400024: Left_MiddleArms
+    400026: Left_Pinky1
+    400028: Left_Pinky2
+    400030: Left_Pinky3
+    400032: Left_Pinky_end
+    400034: Left_Ring1
+    400036: Left_Ring2
+    400038: Left_Ring3
+    400040: Left_Ring_end
+    400042: Left_Thumb1
+    400044: Left_Thumb2
+    400046: Left_Thumb3
+    400048: Left_Thumb_end
+    400050: Left_UpperArms
+    400052: LeftArms
+    400054: LeftFingers
+    400056: null1
+    400058: null3
+    400060: null3 1
+    400062: null4
+    400064: null4 1
+    400066: null5
+    400068: null5 1
+    400070: null6
+    400072: nurbsCircle1
+    400074: nurbsCircle1 1
+    400076: nurbsCircle3
+    400078: nurbsCircle3 1
+    400080: nurbsCircle4
+    400082: nurbsCircle4 1
+    400084: polySurface1
+    400086: Right_Hands
+    400088: Right_Index1
+    400090: Right_Index2
+    400092: Right_Index3
+    400094: Right_Index_end
+    400096: Right_Middle1
+    400098: Right_Middle2
+    400100: Right_Middle3
+    400102: Right_Middle_end
+    400104: Right_MiddleArms
+    400106: Right_Pinky1
+    400108: Right_Pinky2
+    400110: Right_Pinky3
+    400112: Right_Pinky_end
+    400114: Right_Ring1
+    400116: Right_Ring2
+    400118: Right_Ring3
+    400120: Right_Ring_end
+    400122: Right_Thumb1
+    400124: Right_Thumb2
+    400126: Right_Thumb3
+    400128: Right_Thumb_end
+    400130: Right_UpperArms
+    400132: RightArms
+    400134: RightFingers
+    400136: Serpe
+    2300000: polySurface1
+    2300002: Serpe
+    3300000: polySurface1
+    3300002: Serpe
+    4300000: RightArms
+    4300002: LeftArms
+    4300004: Serpe
+    4300006: polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: LeftArms
+    13700002: RightArms
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 15
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
