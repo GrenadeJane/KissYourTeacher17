@@ -503,6 +503,7 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
+    1: AMPLIFY_SHADER_EDITOR
     4: VUFORIA_IOS_SETTINGS
     7: VUFORIA_ANDROID_SETTINGS
     14: VUFORIA_WSA_SETTINGS
