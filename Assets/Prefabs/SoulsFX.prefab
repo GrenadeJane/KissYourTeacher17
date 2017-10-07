@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4804335269369862}
+  - component: {fileID: 114258414343101314}
   m_Layer: 0
   m_Name: SoulsFX
   m_TagString: Untagged
@@ -280,6 +281,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1235600000521280}
   m_Mesh: {fileID: 4300002, guid: 35d20d444562abc4899b71d1da6683b6, type: 3}
+--- !u!114 &114258414343101314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715515719061318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac968473afc1234fa91ba8241fe14ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag0: 
+  resetOnStop: 0
+  duration: 1.5
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  behavior: 0
+  direction: 0
+  gameObjectDisabling: 0
+  buttonDisabler: 0
+  src: {x: 0, y: 0, z: 0}
+  dst: {x: 1, y: 1, z: 1}
 --- !u!198 &198376677243152110
 ParticleSystem:
   m_ObjectHideFlags: 1
