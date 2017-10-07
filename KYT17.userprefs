@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{17A845F2-F7C2-0FB1-1B97-204C20977E0A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AR/ARImage.cs" Line="8" Column="39" />
+      <File FileName="Assets/Scripts/CloudReco/CloudRecoEventHandler.cs" Line="107" Column="1" />
+      <File FileName="Assets/Scripts/ImageTarget/Scripts/CustomTrackableEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ImageTarget/Scripts/CustomTrackableEventListener.cs" Line="1" Column="1" />
+      <File FileName="../../Downloads/module-360-PontALesse/Assets/ImageTarget/Scripts/CustomTrackableEventHandler.cs" Line="76" Column="71" />
+      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="71" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KYT17 PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
