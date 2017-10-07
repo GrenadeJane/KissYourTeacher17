@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0101d5a840ec9e842a7b7099d002d9ef
+timeCreated: 1507409593
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Adonais
+  fontNames:
+  - Adonais
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
