@@ -10,7 +10,7 @@ public class Star : MonoBehaviour {
     public void OnMouseEnter()
     {
 		Debug.Log("HIT" + m_iStarIndex);
-		Constellation.m_instance.AddStar(m_iStarIndex, transform.position);
+        Constellation.m_instance.AddStar(m_iStarIndex, transform.localPosition);
     }
   
 
