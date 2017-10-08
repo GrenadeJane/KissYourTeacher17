@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scripts\CloudReco\ContentManager.cs" />
      <Compile Include="Assets\Scripts\CloudReco\ScanLine.cs" />
      <Compile Include="Assets\Scripts\Constellation.cs" />
-     <Compile Include="Assets\Scripts\Hell.cs" />
      <Compile Include="Assets\Scripts\Interactions\BaseInteraction.cs" />
      <Compile Include="Assets\Scripts\Interactions\Character.cs" />
      <Compile Include="Assets\Scripts\Interactions\DialogueManager.cs" />

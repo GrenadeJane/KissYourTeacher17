@@ -23,7 +23,7 @@ ModelImporter:
     4300006: Spear
   materials:
     importMaterials: 0
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
