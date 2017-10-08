@@ -14,6 +14,7 @@ namespace Vuforia
     public class CustomTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+        public Canvas m_CanvasText;
 
         public  delegate void OnTrackingChange();
         public static event OnTrackingChange OnTrackingCustomFound;
@@ -106,6 +107,7 @@ namespace Vuforia
 
         private void OnTrackingLost()
         {
+            m_CanvasText.enabled = false;
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 

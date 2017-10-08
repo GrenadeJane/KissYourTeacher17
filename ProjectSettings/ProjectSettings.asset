@@ -122,7 +122,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 4800000, guid: bccae85f893782c4f97d8ce436634a16, type: 3}
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
@@ -506,7 +507,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: AMPLIFY_SHADER_EDITOR
     4: VUFORIA_IOS_SETTINGS
-    7: VUFORIA_ANDROID_SETTINGS
+    7: VUFORIA_ANDROID_SETTINGS;AMPLIFY_SHADER_EDITOR
     14: VUFORIA_WSA_SETTINGS
   platformArchitecture: {}
   scriptingBackend: {}

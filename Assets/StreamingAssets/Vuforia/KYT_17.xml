@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="Constellation" size="10.000000 9.972222" />
+    <ImageTarget name="Constellation" size="10.000000 10.027855" />
+    <ImageTarget name="Athena" size="10.000000 10.027855" />
+    <ImageTarget name="Medusa" size="10.000000 10.000000" />
     <ImageTarget name="Boots" size="10.000000 10.000000" />
-    <ImageTarget name="Athena" size="10.000000 9.972222" />
-    <ImageTarget name="Hermes" size="10.000000 9.972222" />
-    <ImageTarget name="Medusa" size="18.000000 18.000000" />
+    <ImageTarget name="Hermes" size="10.000000 10.000000" />
   </Tracking>
 </QCARConfig>

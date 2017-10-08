@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{17A845F2-F7C2-0FB1-1B97-204C20977E0A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interactions/Shield.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Utility/CustomTrackableEventHandler.cs">
     <Files>
       <File FileName="Assets/Scripts/AR/ARImage.cs" Line="8" Column="39" />
       <File FileName="Assets/Scripts/CloudReco/CloudRecoEventHandler.cs" Line="107" Column="1" />
@@ -7,30 +7,32 @@
       <File FileName="Assets/Vuforia/Editor/Scripts/Unzipper/SharpZipLibUnzipper.cs" Line="29" Column="1" />
       <File FileName="Assets/Scripts/Interactions/MiniGameHell.cs" Line="32" Column="3" />
       <File FileName="Assets/Scripts/SoulGhost.cs" Line="25" Column="2" />
-      <File FileName="Assets/Scripts/SoulManager.cs" Line="39" Column="77" />
-      <File FileName="Assets/Scripts/Utility/Touch.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/SoulManager.cs" Line="53" Column="20" />
       <File FileName="Assets/Scripts/Utility/Interactible.cs" Line="21" Column="27" />
-      <File FileName="Assets/Scripts/Interactions/Hermes.cs" Line="41" Column="1" />
+      <File FileName="Assets/Scripts/Interactions/Hermes.cs" Line="23" Column="1" />
       <File FileName="Assets/Scripts/Interactions/Boots.cs" Line="7" Column="1" />
-      <File FileName="Assets/Scripts/Interactions/Hell.cs" Line="27" Column="39" />
-      <File FileName="Assets/Scripts/Interactions/serpe.cs" Line="30" Column="8" />
+      <File FileName="Assets/Scripts/Interactions/Hell.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/Interactions/serpe.cs" Line="26" Column="44" />
       <File FileName="Assets/Scripts/Interactions/StarTrigger.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Interactions/Athena.cs" Line="19" Column="41" />
-      <File FileName="Assets/Scripts/ArmManager.cs" Line="30" Column="6" />
-      <File FileName="Assets/Scripts/Constellation.cs" Line="52" Column="1" />
-      <File FileName="Assets/Scripts/Interactions/BaseInteraction.cs" Line="61" Column="35" />
-      <File FileName="Assets/Scripts/Interactions/Shield.cs" Line="17" Column="16" />
+      <File FileName="Assets/Scripts/Interactions/Athena.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/ArmManager.cs" Line="66" Column="1" />
+      <File FileName="Assets/Scripts/Constellation.cs" Line="66" Column="126" />
+      <File FileName="Assets/Scripts/Interactions/BaseInteraction.cs" Line="112" Column="37" />
+      <File FileName="Assets/Scripts/Interactions/Shield.cs" Line="21" Column="3" />
+      <File FileName="Assets/Scripts/Interactions/Medusa.cs" Line="19" Column="62" />
+      <File FileName="Assets/Scripts/Utility/Touch.cs" Line="28" Column="4" />
+      <File FileName="Assets/Scripts/Interactions/MiniGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Utility/CustomTrackableEventHandler.cs" Line="17" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="139" column="1" />
-      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="145" column="1" />
-      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="127" column="65" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="128" column="65" />
       <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/Hermes.cs" relfile="Assets/Scripts/Interactions/Hermes.cs" line="23" column="1" />
-      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="163" column="1" />
-      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Interactions/BaseInteraction.cs" relfile="Assets/Scripts/Interactions/BaseInteraction.cs" line="162" column="1" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Constellation.cs" relfile="Assets/Scripts/Constellation.cs" line="72" column="1" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/Constellation.cs" relfile="Assets/Scripts/Constellation.cs" line="63" column="1" />
+      <Breakpoint file="/Users/lea/#SourceTree/KYT17/Assets/Scripts/ArmManager.cs" relfile="Assets/Scripts/ArmManager.cs" line="66" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

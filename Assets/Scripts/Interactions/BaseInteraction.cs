@@ -13,9 +13,11 @@ public enum CHARACTERS
 
 public class BaseInteraction : MonoBehaviour
 {
+    public Canvas m_CanvasText;
     protected Dictionary<int, UnityAction> m_ActionsDictionary;
-
-    public Hermes m_Hermes;
+    public GameObject m_arm;
+	public Hermes m_Hermes;
+    public Medusa m_Medusa;
     public Athena m_Athena;
     Dictionary<CHARACTERS, UnityAction[]> m_CharactersDictionary;
 	Dictionary<CHARACTERS, bool[]> m_ConditionsDictionary;
@@ -47,15 +49,15 @@ public class BaseInteraction : MonoBehaviour
 	{
         m_CharactersDictionary[CHARACTERS.ATHENA] = new UnityAction[6];
 
-        m_CharactersDictionary[CHARACTERS.ATHENA][0] = () => { ShowText(" Go show me ur ficking love for ur girl !"); };
+        m_CharactersDictionary[CHARACTERS.ATHENA][0] = () => { ShowText(" Persée, tes paroles ne valent rien pour moi ! Prouve moi ton amour pour Andromède par des actes et je te ferai don de ma protection. \nIndice: Demande de l’aide aux étoiles. \n\nAprès avoir vu la constellation :\nTes actes seront-ils à la hauteur ? "); };
     
 		m_CharactersDictionary[CHARACTERS.ATHENA][1] = () => {
-			ShowText(" I give us this fucking brygthy shield ");
+			ShowText(" Il est rare de voir un telle dévotion pour sa bien-aimée, il ne fait aucuns doutes de tes sentiments. Je n’ai qu’une parole, voici donc mon bouclier, qu’il t’aide à surmonter tes défis.");
             SetSecondConditionDone(CHARACTERS.ATHENA);
 		};
 		m_CharactersDictionary[CHARACTERS.ATHENA][2] = () => {
             m_Athena.ShowShield();
-			ShowText(" Go speak to Hermes ! "); };
+			 };
 		m_CharactersDictionary[CHARACTERS.ATHENA][3] = () => { 
             ShowText(" You take the shield ");
 			ArmManager.instance.HasShield();
@@ -64,15 +66,15 @@ public class BaseInteraction : MonoBehaviour
 
 		m_CharactersDictionary[CHARACTERS.HERMES] = new UnityAction[6];
 	
-        m_CharactersDictionary[CHARACTERS.HERMES][0] = () => { ShowText(" Go find my shoes ? "); };
+        m_CharactersDictionary[CHARACTERS.HERMES][0] = () => { ShowText(" Héros si tu veux de l’aide dans ta quête tu devras m’aider en retour. Mais avant ça il faut que tu trouves quelque chose qui m’appartient. \nIndice : Une fois chaussé tu seras plus rapide qu’un dieu.  "); };
         m_CharactersDictionary[CHARACTERS.HERMES][1] = () => {
-             ShowText(" Go speak to Hell ! "); 
+             ShowText(" Maintenant te voilà presque à ma hauteur, Héro. Ces sandales m’ont permit de livrer les messages des dieux. D’ailleurs voyons si tu en es digne: deviens Guide des âmes de l’enfer comme moi et je réfléchirai peut-être à t’apporter mon aide.  "); 
  
             SetSecondConditionDone(CHARACTERS.HERMES);
         };
         m_CharactersDictionary[CHARACTERS.HERMES][2] = () => {m_Hermes.m_bHellIsShown = true;};
 		m_CharactersDictionary[CHARACTERS.HERMES][3] = () => {
-			ShowText("I Give u the sword "); 
+			ShowText("Ne pense pas être mon égal Persée, mais je dois avouer que tu m’as surpris … voici ma serpe qui t’aidera à vaincre tes ennemis."); 
             SetFourthConditionDone(CHARACTERS.HERMES);
 		};
 
@@ -91,7 +93,7 @@ public class BaseInteraction : MonoBehaviour
 
 		m_CharactersDictionary[CHARACTERS.MEDUSA] = new UnityAction[6];
 
-        m_CharactersDictionary[CHARACTERS.MEDUSA][0] = () => { ShowText(" Medusa kills you ! "); };
+        m_CharactersDictionary[CHARACTERS.MEDUSA][0] = () => {ShowText("Comment oses-tu  te présenter devant moi cupide héros !"); m_arm.GetComponent<ArmManager>().Death(); m_Medusa.Cast(); };
 		m_CharactersDictionary[CHARACTERS.MEDUSA][1] = () =>
         { 
             if ( m_ConditionsDictionary[CHARACTERS.MEDUSA][1]) // :: sword
@@ -108,6 +110,7 @@ public class BaseInteraction : MonoBehaviour
 
     void ShowText(string l_smessage)
     {
+        m_CanvasText.enabled = true;
         m_TextShow.text = l_smessage;
     }
 
@@ -167,13 +170,27 @@ public class BaseInteraction : MonoBehaviour
     {
 		Vuforia.VuforiaBehaviour.Instance.enabled = false;
         l_parent.SetActive(true);
+		m_arm.SetActive(false);
 	}
 
     public void StopMiniGame( GameObject l_parent)
     {
+        m_arm.SetActive(true);
 		Vuforia.VuforiaBehaviour.Instance.enabled = true;
         l_parent.SetActive(false);
 	}
+
+    public void ResetGame()
+    {
+		m_ConditionsDictionary[CHARACTERS.ATHENA] = new bool[3];
+		m_ConditionsDictionary[CHARACTERS.HERMES] = new bool[5];
+		m_ConditionsDictionary[CHARACTERS.MEDUSA] = new bool[3];
+
+		m_CharactersDictionary = new Dictionary<CHARACTERS, UnityAction[]>();
+		m_ActionsDictionary = new Dictionary<int, UnityAction>();
+        Start();
+    }
+
     public void Test()
     {
     }
