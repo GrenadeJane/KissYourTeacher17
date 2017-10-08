@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1461056374051648}
+  m_RootGameObject: {fileID: 1628107420513984}
   m_IsPrefabParent: 1
---- !u!1 &1461056374051648
+--- !u!1 &1628107420513984
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4533689124569946}
-  - component: {fileID: 33349525909797464}
-  - component: {fileID: 23446053976440778}
-  - component: {fileID: 114381437110487918}
-  - component: {fileID: 114957101167852854}
+  - component: {fileID: 4761615112849716}
+  - component: {fileID: 33349418749203890}
+  - component: {fileID: 23743861479374638}
+  - component: {fileID: 114762170614103516}
+  - component: {fileID: 65744963163600070}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: clickableCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4533689124569946
+--- !u!4 &4761615112849716
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461056374051648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1628107420513984}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23446053976440778
+--- !u!23 &23743861479374638
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461056374051648}
+  m_GameObject: {fileID: 1628107420513984}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7909641b295383248a5d379b14888501, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,88 +75,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33349525909797464
+--- !u!33 &33349418749203890
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461056374051648}
+  m_GameObject: {fileID: 1628107420513984}
   m_Mesh: {fileID: 4300004, guid: 355d18cd2bead2e4a9f06116c53c8fdb, type: 3}
---- !u!114 &114381437110487918
+--- !u!65 &65744963163600070
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628107420513984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.72753704, y: 0.1251364, z: 0.727537}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114762170614103516
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461056374051648}
+  m_GameObject: {fileID: 1628107420513984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac968473afc1234fa91ba8241fe14ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 949716a37efa34021a36cadf9fba27fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag0: 
-  resetOnStop: 0
-  duration: 2
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  behavior: 0
-  direction: 0
-  gameObjectDisabling: 0
-  buttonDisabler: 0
-  src: {x: 0, y: 0, z: 0}
-  dst: {x: 1, y: 1, z: 1}
---- !u!114 &114957101167852854
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461056374051648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212d9e7c07977ba4c9a920b1e2ab53c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tag0: 
-  resetOnStop: 0
-  duration: 2
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  behavior: 0
-  direction: 0
-  gameObjectDisabling: 0
-  buttonDisabler: 0
-  isLocal: 1
-  useQuaternion: 0
-  src: {x: 0, y: 0, z: 0}
-  dst: {x: -60, y: 720, z: 0}

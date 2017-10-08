@@ -41,15 +41,15 @@ public class Constellation : MonoBehaviour
 
     public void StartMiniGame()
     {
-        m_Child.enabled = true;
-        Vuforia.VuforiaBehaviour.Instance.enabled = false;
+       // m_Child.enabled = true;
+       // Vuforia.VuforiaBehaviour.Instance.enabled = false;
     }
 
     public void CloseMiniGame()
     {
         Reset();
-        m_Child.enabled = false;
-		Vuforia.VuforiaBehaviour.Instance.enabled = true;
+       // m_Child.enabled = false;
+        BaseInteraction.m_Instance.StopMiniGame(this.gameObject);
         // :: Show bras 
     }
 
@@ -61,8 +61,8 @@ public class Constellation : MonoBehaviour
         {
             if (m_ListStar[i] != null && (!first || !second))
             {
-				if (m_ListStar[i] == "0123" || m_ListStar[i] == "3210") first = true;
-				else if (m_ListStar[i] == "542" || m_ListStar[i] == "245") second = true;
+                if (m_ListStar[i].Contains( "0123" ) || m_ListStar[i].Contains("3210")) first = true;
+                else if (m_ListStar[i].Contains( "542" )|| m_ListStar[i].Contains( "245")) second = true;
             }
         }
 
@@ -103,7 +103,7 @@ public class Constellation : MonoBehaviour
             CreateNewLine();
         }
        
-            m_ListStar[m_iCurrentCountList] += l_iindex.ToString();
+           m_ListStar[m_iCurrentCountList] += l_iindex.ToString();
             m_currentLine.positionCount++;
             m_currentLine.SetPosition(m_iCurrentCount, new Vector3( l_vposition.x, l_vposition.y, m_Child.transform.position.z - 4));
             m_iCurrentCount++;
