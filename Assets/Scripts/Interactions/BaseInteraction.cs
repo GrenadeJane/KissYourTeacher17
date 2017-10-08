@@ -15,6 +15,8 @@ public class BaseInteraction : MonoBehaviour
 {
     protected Dictionary<int, UnityAction> m_ActionsDictionary;
 
+    public Hermes m_Hermes;
+
     Dictionary<CHARACTERS, UnityAction[]> m_CharactersDictionary;
 	Dictionary<CHARACTERS, bool[]> m_ConditionsDictionary;
     public Text m_TextShow;
@@ -33,7 +35,7 @@ public class BaseInteraction : MonoBehaviour
 		m_ConditionsDictionary = new Dictionary<CHARACTERS, bool[]>();
 
 		m_ConditionsDictionary[CHARACTERS.ATHENA] = new bool[3];
-		m_ConditionsDictionary[CHARACTERS.HERMES] = new bool[3];
+		m_ConditionsDictionary[CHARACTERS.HERMES] = new bool[5];
         m_ConditionsDictionary[CHARACTERS.MEDUSA] = new bool[3];
 
 		m_CharactersDictionary = new Dictionary<CHARACTERS, UnityAction[]>();
@@ -49,7 +51,9 @@ public class BaseInteraction : MonoBehaviour
     
 		m_CharactersDictionary[CHARACTERS.ATHENA][1] = () => {
 			Debug.Log(" I give us this fucking brygthy shield ");
-            m_ConditionsDictionary[CHARACTERS.ATHENA][1] = true;
+            ArmManager.instance.HasShield();
+
+			m_ConditionsDictionary[CHARACTERS.ATHENA][1] = true;
 			m_ConditionsDictionary[CHARACTERS.HERMES][2] = true;
 			m_ConditionsDictionary[CHARACTERS.MEDUSA][0] = true;
 		};
@@ -58,15 +62,30 @@ public class BaseInteraction : MonoBehaviour
 
 		m_CharactersDictionary[CHARACTERS.HERMES] = new UnityAction[6];
 	
-        m_CharactersDictionary[CHARACTERS.HERMES][0] = () => { ShowText(" Did you went to hell ? "); };
-        m_CharactersDictionary[CHARACTERS.HERMES][1] = () => { 
-            Debug.Log(" I give us you're sword ");
-            m_ConditionsDictionary[CHARACTERS.HERMES][1] = true;
-            m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
-            m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true; 
+        m_CharactersDictionary[CHARACTERS.HERMES][0] = () => { ShowText(" Go find my shoes ? "); };
+        m_CharactersDictionary[CHARACTERS.HERMES][1] = () => {
+             ShowText(" Go speak to Hell ! "); 
+ 
+            SetSecondConditionDone(CHARACTERS.HERMES);
         };
-		m_CharactersDictionary[CHARACTERS.HERMES][2] = () => { ShowText(" Go speak to Athena ! "); };
-		m_CharactersDictionary[CHARACTERS.HERMES][3] = () => { ShowText("Go Kill Medusa ! "); };
+        m_CharactersDictionary[CHARACTERS.HERMES][2] = () => {m_Hermes.m_bHellIsShown = true;};
+		m_CharactersDictionary[CHARACTERS.HERMES][3] = () => {
+			ShowText("I Give u the sword "); 
+            SetFourthConditionDone(CHARACTERS.HERMES);
+		};
+
+		m_CharactersDictionary[CHARACTERS.HERMES][4] = () => {
+            m_Hermes.ShowSword();
+			m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
+			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
+		};
+
+		m_CharactersDictionary[CHARACTERS.HERMES][5] = () => {
+            ShowText("Vous avez pris l'épée");
+            ArmManager.instance.HasSword();
+			m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
+			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
+		};
 
 		m_CharactersDictionary[CHARACTERS.MEDUSA] = new UnityAction[6];
 
@@ -102,7 +121,7 @@ public class BaseInteraction : MonoBehaviour
             returnValue += 1;
            
         }
-
+        Debug.Log("count condiont " + l_echaracter + returnValue);
         return returnValue;
     }
 
@@ -112,12 +131,47 @@ public class BaseInteraction : MonoBehaviour
 
     }
 
+	public void SetSecondConditionDone(CHARACTERS l_echaracter) // :: at the end of the mini game
+	{
+		m_ConditionsDictionary[l_echaracter][1] = true;
+
+    }
+
+	public void SetThirdConditionDone(CHARACTERS l_echaracter) // :: at the end of the mini game
+	{
+		m_ConditionsDictionary[l_echaracter][2] = true;
+
+	}
+
+	public void SetFourthConditionDone(CHARACTERS l_echaracter) // :: at the end of the mini game
+	{
+		m_ConditionsDictionary[l_echaracter][3] = true;
+
+	}
+
+    public void SetFifthConditionDone(CHARACTERS l_echaracter) // :: at the end of the mini game
+	{
+		m_ConditionsDictionary[l_echaracter][4] = true;
+
+	}
     public void Interact ( CHARACTERS l_echaracter )
     {
         int l_iCountIndex = GetCountOfCondition(l_echaracter);
         m_CharactersDictionary[l_echaracter][l_iCountIndex]();
     }
 
+
+    public void OnMiniGame(GameObject l_parent )
+    {
+		Vuforia.VuforiaBehaviour.Instance.enabled = false;
+        l_parent.SetActive(true);
+	}
+
+    public void StopMiniGame( GameObject l_parent)
+    {
+		Vuforia.VuforiaBehaviour.Instance.enabled = true;
+        l_parent.SetActive(false);
+	}
     public void Test()
     {
     }

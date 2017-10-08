@@ -10,7 +10,7 @@ public class MiniGame : MonoBehaviour {
 
 	public void SendDone()
     {
-        BaseInteraction.m_Instance.SetFirstConditionDone(m_eInteractWith);
+      //  BaseInteraction.m_Instance.SetFirstConditionDone(m_eInteractWith);
         GetComponentInParent<Canvas>().enabled = false;
         m_script.enabled = true;
         m_ARM.SetActive(false);

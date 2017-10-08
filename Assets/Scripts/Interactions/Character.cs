@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class Character : MonoBehaviour
 {
@@ -10,5 +11,11 @@ public class Character : MonoBehaviour
     public void SendInteraction ()
     {
         BaseInteraction.m_Instance.Interact(m_eCharacter);
+    }
+
+
+    public void Update()
+    {
+        
     }
 }

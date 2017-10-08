@@ -19,6 +19,5 @@ public class ObjectPooled : MonoBehaviour {
     public virtual void Clear()
     {
         m_Sprite.enabled = false;
-
 	}
 }

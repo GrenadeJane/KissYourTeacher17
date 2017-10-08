@@ -14,6 +14,13 @@ namespace Vuforia
     public class CustomTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+
+        public  delegate void OnTrackingChange();
+        public static event OnTrackingChange OnTrackingCustomFound;
+        public static event OnTrackingChange OnTrackingCustomLost;
+
+        public AudioSource m_Source;
+
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
@@ -52,10 +59,14 @@ namespace Vuforia
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
                 OnTrackingFound();
+                if (OnTrackingCustomFound != null)
+                    OnTrackingCustomFound();
             }
             else
             {
                 OnTrackingLost();
+				if (OnTrackingCustomLost != null)
+					OnTrackingCustomLost();
             }
         }
 
@@ -72,8 +83,10 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-
-            GetComponent<Character>().SendInteraction();
+            if (m_Source)
+                m_Source.Play();
+            if (GetComponentInChildren<Interactible>())
+                GetComponentInChildren<Interactible>().Found();
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
@@ -95,6 +108,9 @@ namespace Vuforia
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+
+            if (m_Source)
+                m_Source.Pause();
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
