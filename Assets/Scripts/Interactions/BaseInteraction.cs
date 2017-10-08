@@ -16,7 +16,7 @@ public class BaseInteraction : MonoBehaviour
     protected Dictionary<int, UnityAction> m_ActionsDictionary;
 
     public Hermes m_Hermes;
-
+    public Athena m_Athena;
     Dictionary<CHARACTERS, UnityAction[]> m_CharactersDictionary;
 	Dictionary<CHARACTERS, bool[]> m_ConditionsDictionary;
     public Text m_TextShow;
@@ -50,15 +50,17 @@ public class BaseInteraction : MonoBehaviour
         m_CharactersDictionary[CHARACTERS.ATHENA][0] = () => { ShowText(" Go show me ur ficking love for ur girl !"); };
     
 		m_CharactersDictionary[CHARACTERS.ATHENA][1] = () => {
-			Debug.Log(" I give us this fucking brygthy shield ");
-            ArmManager.instance.HasShield();
-
-			m_ConditionsDictionary[CHARACTERS.ATHENA][1] = true;
-			m_ConditionsDictionary[CHARACTERS.HERMES][2] = true;
+			ShowText(" I give us this fucking brygthy shield ");
+            SetSecondConditionDone(CHARACTERS.ATHENA);
+		};
+		m_CharactersDictionary[CHARACTERS.ATHENA][2] = () => {
+            m_Athena.ShowShield();
+			ShowText(" Go speak to Hermes ! "); };
+		m_CharactersDictionary[CHARACTERS.ATHENA][3] = () => { 
+            ShowText(" You take the shield ");
+			ArmManager.instance.HasShield();
 			m_ConditionsDictionary[CHARACTERS.MEDUSA][0] = true;
 		};
-		m_CharactersDictionary[CHARACTERS.ATHENA][2] = () => { ShowText(" Go speak to Hermes ! "); };
-		m_CharactersDictionary[CHARACTERS.ATHENA][3] = () => { ShowText(" Go Kill Medusa ! "); };
 
 		m_CharactersDictionary[CHARACTERS.HERMES] = new UnityAction[6];
 	
@@ -76,14 +78,14 @@ public class BaseInteraction : MonoBehaviour
 
 		m_CharactersDictionary[CHARACTERS.HERMES][4] = () => {
             m_Hermes.ShowSword();
-			m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
+			//m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
 			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
 		};
 
 		m_CharactersDictionary[CHARACTERS.HERMES][5] = () => {
             ShowText("Vous avez pris l'épée");
             ArmManager.instance.HasSword();
-			m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
+		//	m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
 			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
 		};
 

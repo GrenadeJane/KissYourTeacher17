@@ -131,6 +131,7 @@
     <Compile Include="Assets\Scripts\Interactions\MiniGame.cs" />
     <Compile Include="Assets\Scripts\Interactions\MiniGameHell.cs" />
     <Compile Include="Assets\Scripts\Interactions\serpe.cs" />
+    <Compile Include="Assets\Scripts\Interactions\Shield.cs" />
     <Compile Include="Assets\Scripts\Interactions\Souls.cs" />
     <Compile Include="Assets\Scripts\Interactions\Star.cs" />
     <Compile Include="Assets\Scripts\Interactions\StarTrigger.cs" />
