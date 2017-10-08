@@ -55,6 +55,7 @@ ModelImporter:
     3300002: polySurface1
     4300000: Shield2
     4300002: polySurface1
+    4300004: Shield
   materials:
     importMaterials: 0
     materialName: 0
