@@ -49,7 +49,7 @@ public class BaseInteraction : MonoBehaviour
 	{
         m_CharactersDictionary[CHARACTERS.ATHENA] = new UnityAction[6];
 
-        m_CharactersDictionary[CHARACTERS.ATHENA][0] = () => { ShowText(" Persée, tes paroles ne valent rien pour moi ! Prouve moi ton amour pour Andromède par des actes et je te ferai don de ma protection. \nIndice: Demande de l’aide aux étoiles. \n\nAprès avoir vu la constellation :\nTes actes seront-ils à la hauteur ? "); };
+        m_CharactersDictionary[CHARACTERS.ATHENA][0] = () => { ShowText(" Persée, tes paroles ne valent rien pour moi ! Prouve moi ton amour pour Andromède par des actes et je te ferai don de ma protection. \nIndice: Demande de l’aide aux étoiles"); };
     
 		m_CharactersDictionary[CHARACTERS.ATHENA][1] = () => {
 			ShowText(" Il est rare de voir un telle dévotion pour sa bien-aimée, il ne fait aucuns doutes de tes sentiments. Je n’ai qu’une parole, voici donc mon bouclier, qu’il t’aide à surmonter tes défis.");
@@ -59,9 +59,9 @@ public class BaseInteraction : MonoBehaviour
             m_Athena.ShowShield();
 			 };
 		m_CharactersDictionary[CHARACTERS.ATHENA][3] = () => { 
-            ShowText(" You take the shield ");
+            ShowText(" Vous avez pris le bouclier ");
 			ArmManager.instance.HasShield();
-			m_ConditionsDictionary[CHARACTERS.MEDUSA][0] = true;
+            SetSecondConditionDone(CHARACTERS.MEDUSA);
 		};
 
 		m_CharactersDictionary[CHARACTERS.HERMES] = new UnityAction[6];
@@ -80,34 +80,56 @@ public class BaseInteraction : MonoBehaviour
 
 		m_CharactersDictionary[CHARACTERS.HERMES][4] = () => {
             m_Hermes.ShowSword();
-			//m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
-			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
 		};
 
 		m_CharactersDictionary[CHARACTERS.HERMES][5] = () => {
             ShowText("Vous avez pris l'épée");
             ArmManager.instance.HasSword();
-		//	m_ConditionsDictionary[CHARACTERS.ATHENA][2] = true;
-			m_ConditionsDictionary[CHARACTERS.MEDUSA][1] = true;
+            SetFirstConditionDone(CHARACTERS.MEDUSA);
 		};
 
 		m_CharactersDictionary[CHARACTERS.MEDUSA] = new UnityAction[6];
 
-        m_CharactersDictionary[CHARACTERS.MEDUSA][0] = () => {ShowText("Comment oses-tu  te présenter devant moi cupide héros !"); m_arm.GetComponent<ArmManager>().Death(); m_Medusa.Cast(); };
+        m_CharactersDictionary[CHARACTERS.MEDUSA][0] = () => {
+            if (m_ConditionsDictionary[CHARACTERS.MEDUSA][1] )
+            {
+				ShowText("Te cacher ne me tuera pas !"); m_Medusa.Cast(); m_arm.GetComponent<ArmManager>().Death(); 
+            }
+            else 
+                ShowText("Comment oses-tu  te présenter devant moi cupide héros !"); m_arm.GetComponent<ArmManager>().Death(); m_Medusa.Cast(); 
+        };
 		m_CharactersDictionary[CHARACTERS.MEDUSA][1] = () =>
-        { 
-            if ( m_ConditionsDictionary[CHARACTERS.MEDUSA][1]) // :: sword
-            {
-                ShowText("You try to cut her but she freezes you before you touch her "); 
-            }
-            if (m_ConditionsDictionary[CHARACTERS.MEDUSA][0]) // :: shield
-            {
-                ShowText("you freeze her but she comes back");
-            }
+		{
+                ShowText("Crois-tu vraiment que cette serpe suffira ? ");  m_arm.GetComponent<ArmManager>().Death(); m_Medusa.Cast();
+			
 		};
-		m_CharactersDictionary[CHARACTERS.MEDUSA][2] = () => { ShowText(" you killed Medusa ! "); };
-	}
+		//      m_CharactersDictionary[CHARACTERS.MEDUSA][1] = () =>
+		//      { 
+		//          if ( m_ConditionsDictionary[CHARACTERS.MEDUSA][1]) // :: sword
+		//          {
+		//              ShowText("You try to cut her but she freezes you before you touch her "); 
+		//          }
+		//          if (m_ConditionsDictionary[CHARACTERS.MEDUSA][0]) // :: shield
+		//          {
+		//              ShowText("you freeze her but she comes back");
+		//          }
+		//};
+        m_CharactersDictionary[CHARACTERS.MEDUSA][2] = () => { ShowText("Vous avez VAINCU Méduse ! Felicitations ! Andromède vous remercie."); m_Medusa.Die(); m_arm.GetComponent<ArmManager>().Attack(); };
+        ShowText("Bienvenue dans un nouveau chapitre !Aide Persée à devenir un héros en l'aidant à vaincre Médusa afin de libérer Andromède des ses griffes.");
+			StartCoroutine(LateStart(1.5f));
 
+    }
+
+	IEnumerator LateStart(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+        m_CanvasText.enabled = true;
+		//Your Function You Want to Call
+	}
+    private void LateStart()
+    {
+        
+    }
     void ShowText(string l_smessage)
     {
         m_CanvasText.enabled = true;
@@ -189,6 +211,7 @@ public class BaseInteraction : MonoBehaviour
 		m_CharactersDictionary = new Dictionary<CHARACTERS, UnityAction[]>();
 		m_ActionsDictionary = new Dictionary<int, UnityAction>();
         Start();
+        m_CanvasText.enabled = false;
     }
 
     public void Test()

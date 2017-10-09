@@ -61,9 +61,9 @@ public class Constellation : MonoBehaviour
         {
             if (m_ListStar[i] != null && (!first || !second))
             {
-                if (m_ListStar[i].Contains( "0123" ) || m_ListStar[i].Contains("3210")) first = true;
-                else if (m_ListStar[i].Contains( "542" )|| m_ListStar[i].Contains( "245")) second = true;
-                else if (m_ListStar[i].Contains("0123245") || m_ListStar[i].Contains("5423210")) first = true; second = true;
+                if (m_ListStar[i].Contains("0123") || m_ListStar[i].Contains("3210")) first = true;
+                else if (m_ListStar[i].Contains("542") || m_ListStar[i].Contains("245")) second = true;
+                else if (m_ListStar[i].Contains("0123245") || m_ListStar[i].Contains("5423210")) { first = true; second = true; }
             }
         }
 
@@ -85,6 +85,7 @@ public class Constellation : MonoBehaviour
         }
         m_iCurrentCount = 0;
         m_ListStar = new string[5];
+        m_isFound = false;
     }
     private void Awake()
     {
